@@ -37,3 +37,4 @@ next-env.d.ts
 archive
 archive2
 v1
+.env

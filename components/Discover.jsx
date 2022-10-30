@@ -8,7 +8,6 @@ import { selectGenreListId } from '../redux/features/playerSlice';
 import SongCard from './SongCard';
 
 function Discover() {
-  console.log('genres', genres)
   const dispatch = useDispatch();
   const { genreListId } = useSelector((state) => state.player);
   const { activeSong, isPlaying } = useSelector((state) => state.player);
@@ -35,20 +34,13 @@ function Discover() {
       </div>
 
       <div className="flex flex-wrap sm:justify-start justify-center gap-8">
-        {/* {data?.map((song, i) => (
+        {data?.map((song, i) => (
           <SongCard
             key={song.key}
             song={song}
             isPlaying={isPlaying}
             activeSong={activeSong}
             data={data}
-            i={i}
-          />
-        ))} */}
-        {[1, 2, 3]?.map((song, i) => (
-          <SongCard
-            key={song.key}
-            song={song}
             i={i}
           />
         ))}
