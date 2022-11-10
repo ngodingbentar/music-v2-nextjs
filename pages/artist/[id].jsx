@@ -1,5 +1,4 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { DetailsHeader, Error, Loader, RelatedSongs } from '../../components';
@@ -8,7 +7,6 @@ import { useGetArtistDetailsQuery } from '../../redux/services/shazamCore';
 
 const ArtistDetails = () => {
   const router = useRouter();
-  // const { id: artistId } = useParams();
   const artistId = router.query.id;
   const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { data: artistData, isFetching: isFetchingArtistDetails, error } = useGetArtistDetailsQuery(artistId);

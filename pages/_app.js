@@ -5,7 +5,6 @@ import { store } from '../redux/store';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  console.log('store', store.getState())
   const { activeSong } = store.getState().player;
 
   return (

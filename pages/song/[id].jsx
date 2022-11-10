@@ -12,15 +12,12 @@ const SongDetails = () => {
   const songid = router.query.id;
   const dispatch = useDispatch();
   const { id: artistId } = useRouter();
-  console.log('router.query', router.query.id, 'songid', songid, 'artistId', artistId);
   const { activeSong, isPlaying } = useSelector((state) => state.player);
 
   const { data, isFetching: isFetchinRelatedSongs, error } = useGetSongRelatedQuery({ songid });
   const { data: songData, isFetching: isFetchingSongDetails } = useGetSongDetailsQuery({ songid });
 
   if (isFetchingSongDetails && isFetchinRelatedSongs) return <Loader title="Searching song details" />;
-
-  console.log('songData', songData);
 
   if (error) return <Error />;
 
