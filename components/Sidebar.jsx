@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // import { NavLink } from 'react-router-dom';
 import { HiOutlineHashtag, HiOutlineHome, HiOutlineMenu, HiOutlinePhotograph, HiOutlineUserGroup } from 'react-icons/hi';
 import { RiCloseLine } from 'react-icons/ri';
+import { useRouter } from 'next/router'
 
 import { logo } from '../assets/logo.svg';
 
@@ -13,28 +14,24 @@ const links = [
   { name: 'Top Charts', to: '/top/charts', icon: HiOutlineHashtag },
 ];
 
-const NavLinks = ({ handleClick }) => (
-  <div className="mt-10">
-    {links.map((item) => (
-      // <NavLink
-      //   key={item.name}
-      //   to={item.to}
-      //   className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-cyan-400"
-      //   onClick={() => handleClick && handleClick()}
-      // >
-      //   <item.icon className="w-6 h-6 mr-2" />
-      //   {item.name}
-      // </NavLink>
-      <Link key={item.name} href={item.to} className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-cyan-400" onClick={() => handleClick && handleClick()}>
-        <item.icon className="w-6 h-6 mr-2" />
-        {item.name}
-      </Link>
-    ))}
-  </div>
-);
 
 const Sidebar = () => {
+  const router = useRouter()
+  const activeSidebar = router.pathname
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const NavLinks = ({ handleClick }) => (
+    <div className="mt-10">
+      {links.map((item) => (
+        <Link
+          key={item.name} href={item.to} className={`flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-cyan-400 ${activeSidebar === item.to ? 'text-cyan-400' : ''}`}
+          onClick={() => handleClick && handleClick()}>
+          <item.icon className="w-6 h-6 mr-2" />
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  );
 
   return (
     <>

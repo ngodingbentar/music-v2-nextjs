@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
 import { useRouter } from 'next/router'
 
 import { FiSearch } from 'react-icons/fi';
 
 const Searchbar = () => {
-  // const navigate = useNavigate();
   const router = useRouter()
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // navigate(`/search/${searchTerm}`);
     router.push(`/search?q=${searchTerm}`)
   };
 
