@@ -1,9 +1,5 @@
 import { Discover } from '../components'
-export default function Home() {
 
-  return (
-    <>
-      <Discover />
-    </>
-  )
+export default function Home() {
+  return <Discover />
 }

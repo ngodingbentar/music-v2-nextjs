@@ -1,11 +1,10 @@
-import { Searchbar, TopPlay, Discover, MusicPlayer, Sidebar } from '../components'
+import { Searchbar, TopPlay, MusicPlayer, Sidebar } from '../components'
 
 import { Provider } from 'react-redux';
 import { store } from '../redux/store';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  const { activeSong } = store.getState().player;
 
   return (
     <Provider store={store}>
@@ -25,11 +24,7 @@ function MyApp({ Component, pageProps }) {
                 </div>
               </div>
             </div>
-            {activeSong?.title && (
-              <div className="absolute h-28 bottom-0 left-0 right-0 flex animate-slideup bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg rounded-t-3xl z-10">
-                <MusicPlayer />
-              </div>
-            )}
+            <MusicPlayer />
           </div>
         </div>
       </div>

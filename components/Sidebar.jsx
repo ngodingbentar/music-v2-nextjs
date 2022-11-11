@@ -9,8 +9,8 @@ import logo from '../assets/icon3.png'
 const links = [
   { name: 'Discover', to: '/', icon: HiOutlineHome },
   { name: 'Around You', to: '/aroundyou', icon: HiOutlinePhotograph },
-  { name: 'Top Artists', to: '/top/artists', icon: HiOutlineUserGroup },
   { name: 'Top Charts', to: '/top/charts', icon: HiOutlineHashtag },
+  { name: 'Top Artists', to: '/top/artists', icon: HiOutlineUserGroup },
 ];
 
 
@@ -34,7 +34,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#450775]">
+      <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-gradient-to-bl from-[#31353A] to-[#450775] ">
         <Image src={logo} alt="logo" className="w-full h-14 object-contain" />
         <NavLinks />
       </div>
