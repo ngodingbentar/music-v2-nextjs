@@ -1,3 +1,7 @@
+![alt text](https://res.cloudinary.com/dewaqintoro/image/upload/v1668151570/Ngodingbentar/music-v2/Screen_Shot_2022-11-11_at_14.22.16_xtdooh.png)
+![alt text](https://res.cloudinary.com/dewaqintoro/image/upload/v1668151535/Ngodingbentar/music-v2/Screen_Shot_2022-11-11_at_14.24.32_hhw5ch.png)
+![alt text](https://res.cloudinary.com/dewaqintoro/image/upload/v1668151554/Ngodingbentar/music-v2/Screen_Shot_2022-11-11_at_14.23.43_xpb4p4.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
