@@ -19,9 +19,9 @@ function MyApp({ Component, pageProps }) {
                 <div className="flex-1 h-fit pb-40">
                   <Component {...pageProps} />
                 </div>
-                {/* <div className="xl:sticky relative top-0 h-fit">
+                <div className="xl:sticky relative top-0 h-fit">
                   <TopPlay />
-                </div> */}
+                </div>
               </div>
             </div>
             <MusicPlayer />
