@@ -6,6 +6,7 @@ import Loader from './Loader';
 import { useGetSongsByGenreQuery } from '../redux/services/shazamCore';
 import { selectGenreListId } from '../redux/features/playerSlice';
 import SongCard from './SongCard';
+import TopPlay from './TopPlay';
 
 function Discover() {
   const dispatch = useDispatch();
@@ -21,6 +22,9 @@ function Discover() {
 
   return (
     <div className="flex flex-col">
+      <div className="xl:sticky relative top-0 h-fit">
+        <TopPlay />
+      </div>
       <div className="w-full flex justify-between items-center sm:flex-row flex-col mt-4 mb-10">
         <h2 className="font-bold text-3xl text-white text-left">Discover {genreTitle}</h2>
 
